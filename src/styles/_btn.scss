@@ -1,0 +1,20 @@
+.btn{
+    all: unset;
+    color: $textColor;
+    font-size: 21px;
+    font-family: 'Signika', sans-serif;
+    font-weight: 400;
+    border: 1px solid #e2dddd;
+    background: $btn-backgroundColor;
+    padding: 10px;
+    min-width: 100px;
+    text-align: center;
+    border-radius:4px ;
+    margin: 12px 10px;
+
+    &:hover{
+        opacity: 1;
+        background-color: #38bdf8;
+        cursor: pointer;
+    }
+}

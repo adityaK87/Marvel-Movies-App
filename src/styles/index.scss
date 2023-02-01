@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#root, body, html{
+    overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+    background: #fffefe00;
+    border-radius: 5px;
+ }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 42%, #202428 100%);
+    border-radius: 5px;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+ }
+
+@import "variables";
+
+@import 'navbar';
+
+@import 'landingPage';
+
+@import 'btn';
+

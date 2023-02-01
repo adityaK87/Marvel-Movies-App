@@ -1,0 +1,53 @@
+@import './variables';
+
+header{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    // background-color:$navbarBackgroundColor  ;
+    background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 40%, #202428 100%);
+    flex-wrap: wrap;
+    border-top: 1px solid #e4e2e2ad;
+    border-bottom: 1px solid #e4e2e2ad;
+
+    img{
+        width: 5rem;
+    }
+
+    div{
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-between;
+        float: right;
+
+    }
+}
+
+.app-name{
+    font-size: 2em;
+    font-weight: 700;
+    align-self: center;
+    color:$navTextColor ;
+}
+
+.navlink{
+    color: $navTextColor;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    list-style: none;
+    padding: 17px;
+    margin-bottom: 5px;
+    
+    &:hover{
+        cursor: pointer;
+        color: #0ea5e9;
+        text-decoration: underline;
+    }
+}

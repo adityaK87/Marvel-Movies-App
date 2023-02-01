@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+#root, body, html {
+  overflow-x: hidden; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fffefe00;
+  border-radius: 5px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 42%, #202428 100%);
+  border-radius: 5px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
+header {
+  width: 100%; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 40%, #202428 100%);
+  flex-wrap: wrap;
+  border-top: 1px solid #e4e2e2ad;
+  border-bottom: 1px solid #e4e2e2ad; }
+  .navbar img {
+    width: 5rem; }
+  .navbar div {
+    display: flex;
+    flex-direction: row;
+    float: right; }
+
+.app-name {
+  font-size: 2em;
+  font-weight: 700;
+  align-self: center;
+  color: #fff; }
+
+.navlink {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  list-style: none;
+  padding: 17px;
+  margin-bottom: 5px; }
+  .navlink:hover {
+    cursor: pointer;
+    color: #0ea5e9;
+    text-decoration: underline; }
+
+.vanta-canvas {
+  z-index: 0;
+  top: 67px;
+  left: 0px;
+  width: 100% !important;
+  height: 90vh !important; }
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.landing-page {
+  height: 90vh;
+  display: flex;
+  justify-content: center; }
+
+.btn {
+  all: unset;
+  color: #e8e4e4;
+  font-size: 21px;
+  font-family: 'Signika', sans-serif;
+  font-weight: 400;
+  border: 1px solid #e2dddd;
+  background: #0ea5e9;
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 12px 10px; }
+  .btn:hover {
+    opacity: 1;
+    background-color: #38bdf8;
+    cursor: pointer; }
+
+/*# sourceMappingURL=index.css.map */
