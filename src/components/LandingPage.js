@@ -39,12 +39,12 @@ const LandingPage = ({
 					className='btn'>
 					Characters
 				</Link>
-				<button onClick={handleOnComics} className='btn'>
+				<Link to='/comics' onClick={handleOnComics} className='btn'>
 					Comics
-				</button>
-				<button onClick={handleOnSeries} className='btn'>
+				</Link>
+				<Link to='/series' onClick={handleOnSeries} className='btn'>
 					Series
-				</button>
+				</Link>
 			</div>
 		</div>
 	);

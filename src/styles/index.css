@@ -97,4 +97,19 @@ header {
     background-color: #38bdf8;
     cursor: pointer; }
 
+.character-list {
+  display: flex;
+  flex-wrap: wrap; }
+
+.character-card {
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  width: 15rem;
+  height: 20rem;
+  margin: 10px auto; }
+
+.character-img {
+  width: 7rem; }
+
 /*# sourceMappingURL=index.css.map */

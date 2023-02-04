@@ -17,7 +17,10 @@ const Navbar = () => {
 				<NavLink className='navlink' to='/'>
 					About
 				</NavLink>
-				<NavLink className='navlink' to='/'>
+				<NavLink
+					className='navlink'
+					to='https://developer.marvel.com/'
+					target='_blank'>
 					API
 				</NavLink>
 			</div>
