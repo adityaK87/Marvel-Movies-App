@@ -3,7 +3,7 @@ import "../styles/index.css";
 
 const CharacterCard = ({ name, thumbnail, description, urls }) => {
 	return (
-		<div className='character-card' data-aos='fade-left'>
+		<div className='character-card'>
 			<div className='img'>
 				<img
 					src={`${thumbnail.path}.jpg`}
@@ -13,11 +13,11 @@ const CharacterCard = ({ name, thumbnail, description, urls }) => {
 			</div>
 			<div className='character-content'>
 				<h4 className='character-name'>{name}</h4>
-				{description.length > 0 ? (
-					<p className='character-description'>{description}</p>
-				) : (
-					" "
-				)}
+				{/* {description.length > 0 ? ( */}
+				<p className='character-description'>{description}</p>
+				{/* ) : ( */}
+				{/* " " */}
+				{/* )} */}
 			</div>
 		</div>
 	);

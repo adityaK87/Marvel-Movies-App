@@ -112,4 +112,43 @@ header {
 .character-img {
   width: 7rem; }
 
+.card {
+  margin: 10px auto;
+  width: 20rem;
+  height: auto;
+  background-color: #1e293b;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+.card-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%; }
+
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-top: 10px;
+  color: #0ea5e9; }
+
+.card-content-div {
+  text-align: center; }
+
+.card-content {
+  padding: 10px 0px 10px 0px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  color: #cbd5e1; }
+
 /*# sourceMappingURL=index.css.map */

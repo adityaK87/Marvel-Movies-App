@@ -1,16 +1,15 @@
 import React from "react";
 import Card from "./Card";
 
-const CharactersList = ({ characterData }) => {
-	console.log(characterData);
+const SeriesList = ({ seriesData }) => {
 	return (
 		<div className='character-list'>
-			{characterData?.map(
-				({ name, id, thumbnail: { path }, description }) => {
+			{seriesData?.map(
+				({ title, id, thumbnail: { path }, description }) => {
 					return (
 						<Card
 							key={id}
-							name={name}
+							name={title}
 							path={path}
 							description={description}
 						/>
@@ -20,4 +19,5 @@ const CharactersList = ({ characterData }) => {
 		</div>
 	);
 };
-export default CharactersList;
+
+export default SeriesList;

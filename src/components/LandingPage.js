@@ -3,11 +3,13 @@ import "../styles/index.css";
 import DOTS from "vanta/dist/vanta.rings.min";
 import { Link } from "react-router-dom";
 
-const LandingPage = ({
-	handleOnCharacters,
-	handleOnComics,
-	handleOnSeries,
-}) => {
+const LandingPage = (
+	{
+		// handleOnCharacters,
+		// handleOnComics,
+		// handleOnSeries,
+	}
+) => {
 	const [vantaEffect, setVantaEffect] = useState(null);
 	const myRef = useRef(null);
 	useEffect(() => {
@@ -35,14 +37,20 @@ const LandingPage = ({
 			<div className='btns'>
 				<Link
 					to='/characters'
-					onClick={handleOnCharacters}
+					// onClick={handleOnCharacters}
 					className='btn'>
 					Characters
 				</Link>
-				<Link to='/comics' onClick={handleOnComics} className='btn'>
+				<Link
+					to='/comics'
+					//  onClick={handleOnComics}
+					className='btn'>
 					Comics
 				</Link>
-				<Link to='/series' onClick={handleOnSeries} className='btn'>
+				<Link
+					to='/series'
+					//  onClick={handleOnSeries}
+					className='btn'>
 					Series
 				</Link>
 			</div>
