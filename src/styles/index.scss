@@ -6,6 +6,9 @@
 #root, body, html{
     overflow-x: hidden;
 }
+body{
+   background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -38,4 +41,11 @@
 @import 'btn';
 
 @import 'card';
+
+
+.loader{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 

@@ -3,11 +3,12 @@ import Card from "./Card";
 
 const SeriesList = ({ seriesData }) => {
 	return (
-		<div className='character-list'>
+		<div className='card-list'>
 			{seriesData?.map(
-				({ title, id, thumbnail: { path }, description }) => {
+				({ title, id, thumbnail: { path }, description, urls }) => {
 					return (
 						<Card
+							urls={urls}
 							key={id}
 							name={title}
 							path={path}

@@ -1,33 +1,28 @@
-.character-list{
+.card-list{
+    margin-top: 30px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
-
-.character-card{
-    background-color:$cardBackgroundColor;
-    display: flex;
-    align-items: center;
-    width: 15rem;
-    height: 20rem;
-    margin: 10px auto;
-}
-
 
 .character-img{
     width: 7rem;
 }
 
 .card{
-    margin: 10px auto;
-    width: 20rem;
+    margin: 15px 15px;
+    width: 15rem;
     height: auto;
     background-color: $cardBackgroundColor;
     padding: 1rem; 
-    border-radius: 0.75rem; 
+    border-radius: 4px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    &:hover{
+        transform: translate(0px, -5px);
+    }
 }
 
 .card-image{

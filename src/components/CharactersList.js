@@ -4,11 +4,12 @@ import Card from "./Card";
 const CharactersList = ({ characterData }) => {
 	console.log(characterData);
 	return (
-		<div className='character-list'>
+		<div className='card-list'>
 			{characterData?.map(
-				({ name, id, thumbnail: { path }, description }) => {
+				({ name, id, thumbnail: { path }, description, urls }) => {
 					return (
 						<Card
+							urls={urls}
 							key={id}
 							name={name}
 							path={path}

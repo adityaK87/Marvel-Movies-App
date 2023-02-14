@@ -5,6 +5,9 @@
 #root, body, html {
   overflow-x: hidden; }
 
+body {
+  background: url("../assets/SpeedlineCard.png") no-repeat center center/cover; }
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px; }
@@ -97,32 +100,28 @@ header {
     background-color: #38bdf8;
     cursor: pointer; }
 
-.character-list {
+.card-list {
+  margin-top: 30px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap; }
-
-.character-card {
-  background-color: #1e293b;
-  display: flex;
-  align-items: center;
-  width: 15rem;
-  height: 20rem;
-  margin: 10px auto; }
 
 .character-img {
   width: 7rem; }
 
 .card {
-  margin: 10px auto;
-  width: 20rem;
+  margin: 15px 15px;
+  width: 15rem;
   height: auto;
   background-color: #1e293b;
   padding: 1rem;
-  border-radius: 0.75rem;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center; }
+  .card:hover {
+    transform: translate(0px, -5px); }
 
 .card-image {
   margin-left: auto;
@@ -150,5 +149,10 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   color: #cbd5e1; }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=index.css.map */
