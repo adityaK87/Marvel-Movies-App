@@ -2,11 +2,8 @@ import React from "react";
 import "../styles/index.css";
 
 const Button = ({ name, handleOnCharacters }) => {
-	return (
-		<button className='btn' onClick={handleOnCharacters}>
-			{name}
-		</button>
-	);
+	console.log("clicked on button");
+	return <button className='btn'>{name}</button>;
 };
 
 export default Button;

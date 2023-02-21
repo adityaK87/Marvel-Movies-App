@@ -1,24 +1,28 @@
 import React from "react";
 import Card from "./Card";
+import Pagination from "./Pagination";
 
 const CharactersList = ({ characterData }) => {
-	console.log(characterData);
+	const { results, total } = characterData; //destructuring the character data
 	return (
-		<div className='card-list'>
-			{characterData?.map(
-				({ name, id, thumbnail: { path }, description, urls }) => {
-					return (
-						<Card
-							urls={urls}
-							key={id}
-							name={name}
-							path={path}
-							description={description}
-						/>
-					);
-				}
-			)}
-		</div>
+		<>
+			<Pagination totalResults={total} />
+			<div className='card-list'>
+				{results?.map(
+					({ name, id, thumbnail: { path }, description, urls }) => {
+						return (
+							<Card
+								urls={urls}
+								key={id}
+								name={name}
+								path={path}
+								description={description}
+							/>
+						);
+					}
+				)}
+			</div>
+		</>
 	);
 };
 export default CharactersList;

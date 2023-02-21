@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const MoviesContextMenu = createContext()
+const useGlobalContext = createContext();
 
-export default MoviesContextMenu;
+export default useGlobalContext;

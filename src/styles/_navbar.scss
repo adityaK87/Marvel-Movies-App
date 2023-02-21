@@ -39,15 +39,31 @@ header{
 .navlink{
     color: $navTextColor;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 17px;
-    font-weight: 500;
     list-style: none;
-    padding: 17px;
+    padding: 0 10px;
     margin-bottom: 5px;
-    
-    &:hover{
+    position: relative;
+    font-family: 'Poppins' , sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    &::after{
+        content: " ";
+        position: absolute;
+        background-color: #ff3c78;
+        height: 3px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+      
+    }
+    &:hover::after{
         cursor: pointer;
-        color: #0ea5e9;
-        text-decoration: underline;
+        color: #fff;
+        width: 90%;
+    }
+    &:hover{
+        color: #fff;
     }
 }

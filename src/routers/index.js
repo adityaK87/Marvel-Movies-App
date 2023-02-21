@@ -7,69 +7,77 @@ import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
 import ComicList from "../components/ComicList";
 import SeriesList from "../components/SeriesList";
+import About from "../components/About";
+import useGlobalContext from "../context";
 
 const AppRouter = () => {
 	const [apiData, setApiData] = useState([]);
 	const [category, setCategory] = useState("characters");
 	const [isLoading, setIsLoading] = useState(false);
+	const [offset, setOffset] = useState(0);
 
 	useEffect(() => {
-		movieData(category, setApiData, setIsLoading);
+		setIsLoading(true);
+		movieData(category, setApiData, offset);
 		console.log("inside useEffect " + apiData);
-	}, [category, setApiData]);
+		setIsLoading(false);
+	}, [category, setApiData, offset]);
 
 	const setCategoryToLocalStorage = (category) => {
 		localStorage.setItem("category", category);
 	};
 
 	const handleOnCharacters = () => {
-		// localStorage.setItem("category", "characters");
 		setCategoryToLocalStorage("characters");
 		setCategory(localStorage.getItem("category"));
 	};
 
 	const handleOnComics = () => {
-		// localStorage.setItem("category", "comics");
-
 		setCategoryToLocalStorage("comics");
 		setCategory(localStorage.getItem("category"));
 	};
+
 	const handleOnSeries = () => {
 		setCategoryToLocalStorage("series");
-		// localStorage.setItem("category", "series");
 		setCategory(localStorage.getItem("category"));
 	};
 
+	console.log(apiData);
+
 	return (
 		<>
-			<Router>
-				{isLoading ? <Loader /> : " "}
-				<Navbar />
-				<Routes>
-					<Route
-						path='/'
-						element={
-							<LandingPage
-								handleOnCharacters={handleOnCharacters}
-								handleOnComics={handleOnComics}
-								handleOnSeries={handleOnSeries}
-							/>
-						}
-					/>
-					<Route
-						path='/characters'
-						element={<CharactersList characterData={apiData} />}
-					/>
-					<Route
-						path='/comics'
-						element={<ComicList comicData={apiData} />}
-					/>
-					<Route
-						path='/series'
-						element={<SeriesList seriesData={apiData} />}
-					/>
-				</Routes>
-			</Router>
+			<useGlobalContext.Provider
+				value={{ apiData, isLoading, setOffset }}>
+				<Router>
+					{isLoading ? <Loader /> : null}
+					<Navbar />
+					<Routes>
+						<Route
+							path='/'
+							element={
+								<LandingPage
+									handleOnCharacters={handleOnCharacters}
+									handleOnComics={handleOnComics}
+									handleOnSeries={handleOnSeries}
+								/>
+							}
+						/>
+						<Route path='/about' element={<About />} />
+						<Route
+							path='/characters'
+							element={<CharactersList characterData={apiData} />}
+						/>
+						<Route
+							path='/comics'
+							element={<ComicList comicData={apiData} />}
+						/>
+						<Route
+							path='/series'
+							element={<SeriesList seriesData={apiData} />}
+						/>
+					</Routes>
+				</Router>
+			</useGlobalContext.Provider>
 		</>
 	);
 };

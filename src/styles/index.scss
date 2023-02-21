@@ -6,9 +6,12 @@
 #root, body, html{
     overflow-x: hidden;
 }
-body{
-   background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
-}
+// body{
+//    // background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
+// }
+// body{
+//    // background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
+// }
 
 /* width */
 ::-webkit-scrollbar {
@@ -41,6 +44,10 @@ body{
 @import 'btn';
 
 @import 'card';
+
+@import 'about';
+
+@import 'pagination';
 
 
 .loader{

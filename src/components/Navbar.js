@@ -8,13 +8,15 @@ const Navbar = () => {
 	return (
 		<nav className='navbar'>
 			<div className='left'>
-				<img className='left logo' src={logo} />
+				<NavLink to='/'>
+					<img className='left logo' src={logo} />
+				</NavLink>
 			</div>
 			<div className='right'>
 				<NavLink className='navlink' to='/'>
 					Home
 				</NavLink>
-				<NavLink className='navlink' to='/'>
+				<NavLink className='navlink' to='/about'>
 					About
 				</NavLink>
 				<NavLink
