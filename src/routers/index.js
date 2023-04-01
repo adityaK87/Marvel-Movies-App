@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { movieData } from "../api";
+// import
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "../components/LandingPage";
 import CharactersList from "../components/CharactersList";
@@ -9,9 +10,10 @@ import ComicList from "../components/ComicList";
 import SeriesList from "../components/SeriesList";
 import About from "../components/About";
 import useGlobalContext from "../context";
+import CardSwiper from "../components/CardSwiper";
 
 const AppRouter = () => {
-	const [apiData, setApiData] = useState([]);
+	const [apiData, setApiData] = useState({});
 	const [category, setCategory] = useState("characters");
 	const [isLoading, setIsLoading] = useState(false);
 	const [offset, setOffset] = useState(0);
@@ -21,7 +23,7 @@ const AppRouter = () => {
 		movieData(category, setApiData, offset);
 		console.log("inside useEffect " + apiData);
 		setIsLoading(false);
-	}, [category, setApiData, offset]);
+	}, [category, offset]);
 
 	const setCategoryToLocalStorage = (category) => {
 		localStorage.setItem("category", category);
@@ -29,17 +31,17 @@ const AppRouter = () => {
 
 	const handleOnCharacters = () => {
 		setCategoryToLocalStorage("characters");
-		setCategory(localStorage.getItem("category"));
+		// setCategory(localStorage.getItem("category"));
 	};
 
 	const handleOnComics = () => {
 		setCategoryToLocalStorage("comics");
-		setCategory(localStorage.getItem("category"));
+		// setCategory(localStorage.getItem("category"));
 	};
 
 	const handleOnSeries = () => {
 		setCategoryToLocalStorage("series");
-		setCategory(localStorage.getItem("category"));
+		// setCategory(localStorage.getItem("category"));
 	};
 
 	console.log(apiData);
@@ -55,11 +57,14 @@ const AppRouter = () => {
 						<Route
 							path='/'
 							element={
-								<LandingPage
-									handleOnCharacters={handleOnCharacters}
-									handleOnComics={handleOnComics}
-									handleOnSeries={handleOnSeries}
-								/>
+								<>
+									<LandingPage
+										handleOnCharacters={handleOnCharacters}
+										handleOnComics={handleOnComics}
+										handleOnSeries={handleOnSeries}
+									/>
+									<CardSwiper />
+								</>
 							}
 						/>
 						<Route path='/about' element={<About />} />

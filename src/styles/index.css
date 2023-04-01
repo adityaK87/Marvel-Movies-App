@@ -1,28 +1,3 @@
-* {
-  margin: 0px;
-  padding: 0px; }
-
-#root, body, html {
-  overflow-x: hidden; }
-
-/* width */
-::-webkit-scrollbar {
-  width: 8px; }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #fffefe00;
-  border-radius: 5px; }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 42%, #202428 100%);
-  border-radius: 5px; }
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; }
-
 header {
   width: 100%; }
 
@@ -32,7 +7,7 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 10vh;
-  background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 40%, #202428 100%);
+  background-color: #e42525;
   flex-wrap: wrap;
   border-top: 1px solid #e4e2e2ad;
   border-bottom: 1px solid #e4e2e2ad; }
@@ -83,15 +58,30 @@ header {
   width: 100% !important;
   height: 90vh !important; }
 
+.landing-page::before {
+  content: "";
+  background: url(".././assets/marvelbg.jpg") no-repeat center center/cover;
+  opacity: 0.1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.89; }
+
 .btns {
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .landing-page {
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center; }
+
+.heading {
+  margin-top: 7em; }
 
 .btn {
   all: unset;
@@ -124,7 +114,7 @@ header {
   margin: 15px 15px;
   width: 15rem;
   height: auto;
-  background-color: #051b27;
+  background: linear-gradient(45deg, #cd2121, #f42828);
   padding: 1rem;
   border-radius: 4px;
   display: flex;
@@ -208,6 +198,80 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center; }
+
+.swiper {
+  width: 75% !important;
+  height: 60vh !important;
+  padding: 30px !important; }
+
+.swiper-slide {
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center;
+  align-items: center; }
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto; }
+
+.swiperCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none; }
+  .swiperCard img {
+    height: 50vh;
+    width: 35vh;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px; }
+  .swiperCard:hover {
+    color: #eb2328;
+    cursor: pointer; }
+    .swiperCard:hover img {
+      transform: translate(0px, -5px);
+      transition: all .17s ease-in-out;
+      box-shadow: 0 26px 24px -16px rgba(0, 0, 0, 0.4); }
+
+@media only screen and (max-width: 380px) {
+  .swiperCard img {
+    height: 40vh;
+    width: 30vh; } }
+* {
+  margin: 0px;
+  padding: 0px; }
+
+#root, body, html {
+  overflow-x: hidden;
+  color: #764AF1;
+  font-family: "Poppins", sans-serif;
+  padding: 0px;
+  margin: 0px; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fffefe00;
+  border-radius: 5px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2389CC 0%, #2C87C7 42%, #202428 100%);
+  border-radius: 5px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
 
 .loader {
   display: flex;

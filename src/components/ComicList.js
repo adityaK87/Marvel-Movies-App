@@ -3,6 +3,7 @@ import Card from "./Card";
 import Pagination from "./Pagination";
 
 const ComicList = ({ comicData }) => {
+	console.log("comicData    ", comicData);
 	const { results, total } = comicData;
 	return (
 		<>

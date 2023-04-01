@@ -4,6 +4,7 @@ import Card from "./Card";
 import Pagination from "./Pagination";
 
 const SeriesList = ({ seriesData }) => {
+	console.log("seriesData", seriesData);
 	const { results, total } = seriesData;
 	console.log(results, total);
 

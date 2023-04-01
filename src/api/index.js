@@ -12,11 +12,22 @@ export const movieData = async (category, setApiData, offset) => {
 	try {
 		const response = await axios.get(marvelUrl);
 		setApiData(response.data.data);
-		console.log(response.data.data);
+		console.log("safsdf  ", response?.data?.data);
 	} catch (error) {
 		console.log(error);
 	}
 };
+
+// export const fetchMarvelData = async (setFunction, category) => {
+// 	try {
+// 		const response = await axios.get(`${Marvel_Url}/${category}${Api_Key}`);
+// 		setFunction(response.data.data.results);
+// 		console.log(response);
+// 	} catch (error) {
+// 		console.log(error);
+// 	}
+// };
+// fetchMarvelData();
 
 // export const fetchCharactersData = async (setCharacters) => {
 // 	try {

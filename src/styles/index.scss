@@ -1,3 +1,19 @@
+@import "variables";
+
+@import 'navbar';
+
+@import 'landingPage';
+
+@import 'btn';
+
+@import 'card';
+
+@import 'about';
+
+@import 'pagination';
+
+@import 'cardSwiper';
+
 *{
     margin: 0px;
     padding: 0px;
@@ -5,14 +21,12 @@
 
 #root, body, html{
     overflow-x: hidden;
+    color: $textColor;
+   //  background: $background-color;
+   font-family: $font-family;
+   padding: 0px;
+   margin: 0px;
 }
-// body{
-//    // background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
-// }
-// body{
-//    // background: url('../assets/SpeedlineCard.png') no-repeat center center/cover;
-// }
-
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
@@ -35,19 +49,6 @@
     background: #555;
  }
 
-@import "variables";
-
-@import 'navbar';
-
-@import 'landingPage';
-
-@import 'btn';
-
-@import 'card';
-
-@import 'about';
-
-@import 'pagination';
 
 
 .loader{

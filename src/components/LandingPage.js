@@ -1,51 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import "../styles/index.css";
-import DOTS from "vanta/dist/vanta.rings.min";
-import { Link } from "react-router-dom";
-
-const LandingPage = ({
-	handleOnCharacters,
-	handleOnComics,
-	handleOnSeries,
-}) => {
-	const [vantaEffect, setVantaEffect] = useState(null);
-	const myRef = useRef(null);
-	useEffect(() => {
-		if (!vantaEffect) {
-			setVantaEffect(
-				DOTS({
-					el: myRef.current,
-					mouseControls: true,
-					touchControls: true,
-					gyroControls: false,
-					minHeight: 200.0,
-					minWidth: 200.0,
-					scale: 1.0,
-					scaleMobile: 1.0,
-				})
-			);
-		}
-		return () => {
-			if (vantaEffect) vantaEffect.destroy();
-		};
-	}, [vantaEffect]);
-
+const LandingPage = () => {
 	return (
-		<div ref={myRef} className='landing-page'>
-			<div className='btns'>
-				<Link
-					to='/characters'
-					onClick={handleOnCharacters}
-					className='btn'>
-					Characters
-				</Link>
-				<Link to='/comics' onClick={handleOnComics} className='btn'>
-					Comics
-				</Link>
-				<Link to='/series' onClick={handleOnSeries} className='btn'>
-					Series
-				</Link>
-			</div>
+		<div className='landing-page'>
+			<h1 className='heading'>WELCOME TO MARVEL CINEMATIC UNIVERSE</h1>
+			<a href='#card-swiper'>Get Started</a>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@ import Card from "./Card";
 import Pagination from "./Pagination";
 
 const CharactersList = ({ characterData }) => {
+	console.log("characterData", characterData);
 	const { results, total } = characterData; //destructuring the character data
 	return (
 		<>
