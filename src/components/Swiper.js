@@ -26,10 +26,10 @@ const CardSwiper = () => {
 				pagination={{
 					clickable: true,
 				}}
-				// autoplay={{
-				// 	delay: 4000,
-				// 	disableOnInteraction: false,
-				// }}
+				autoplay={{
+					delay: 4000,
+					disableOnInteraction: false,
+				}}
 				navigation={true}
 				modules={[Autoplay, Pagination, Navigation]}
 				className='mySwiper'>

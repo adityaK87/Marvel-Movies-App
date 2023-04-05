@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import Card from "./Card";
+import useGlobalContext from "../context";
 import Pagination from "./Pagination";
+import Loader from "./Loader";
 
-const CharactersList = ({ characterData }) => {
-	console.log("characterData", characterData);
-	const { results, total } = characterData; //destructuring the character data
+const CharactersList = ({ characters }) => {
+	const { results, total } = characters; //destructuring the character data
+	const { isLoading } = useContext(useGlobalContext);
 	return (
 		<>
+			{isLoading ? (
+				<Loader />
+			) : (
+				<div className='card-list'>
+					{results?.map(
+						({
+							name,
+							id,
+							thumbnail: { path },
+							description,
+							urls,
+						}) => {
+							return (
+								<Card
+									urls={urls}
+									key={id}
+									name={name}
+									path={path}
+									description={description}
+								/>
+							);
+						}
+					)}
+				</div>
+			)}
 			<Pagination totalResults={total} />
-			<div className='card-list'>
-				{results?.map(
-					({ name, id, thumbnail: { path }, description, urls }) => {
-						return (
-							<Card
-								urls={urls}
-								key={id}
-								name={name}
-								path={path}
-								description={description}
-							/>
-						);
-					}
-				)}
-			</div>
 		</>
 	);
 };

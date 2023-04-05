@@ -1,34 +1,28 @@
 import React from "react";
 
 const Card = ({ name, path, description, urls }) => {
-	const clickedOnPara = () => {
-		description.slice(0);
-	};
-
 	return (
-		<div className='card '>
+		<article className='card '>
 			<img
 				className='card-image'
 				src={`${path}.jpg`}
 				alt=''
-				width='384'
-				height='512'
 				loading='lazy'
 			/>
-			<div className='title'>{name}</div>
+			<p className='title'>{name}</p>
 			<div className=' card-content-div'>
-				<p className='card-content' onClick={clickedOnPara}>
+				{/* <p className='card-content' onClick={clickedOnPara}>
 					{description === null
 						? "NA"
 						: `${description.slice(0, 60)}...`}
-				</p>
+				</p> */}
 				<figcaption className='font-medium'>
-					<div style={{ color: "#64748b" }}>
+					{/* <div style={{ color: "#64748b" }}>
 						Staff Engineer, Algolia
-					</div>
+					</div> */}
 				</figcaption>
 			</div>
-		</div>
+		</article>
 	);
 };
 

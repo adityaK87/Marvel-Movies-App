@@ -5,7 +5,7 @@
     font-family: 'Signika', sans-serif;
     font-weight: 400;
     border: 1px solid #e2dddd;
-    background: #0ea5e9;
+    background:$btn-background-color;
     padding: 8px;
     min-width: 77px;
     text-align: center;
@@ -14,7 +14,7 @@
 
     &:hover{
         opacity: 1;
-        background-color: #38bdf8;
+        background-color: $btn-background-color-on-hover;
         cursor: pointer;
     }
 }

@@ -51,13 +51,6 @@ header {
   .navlink:hover {
     color: #fff; }
 
-.vanta-canvas {
-  z-index: 0;
-  top: 67px;
-  left: 0px;
-  width: 100% !important;
-  height: 90vh !important; }
-
 .landing-page::before {
   content: "";
   background: url(".././assets/marvelbg.jpg") no-repeat center center/cover;
@@ -81,7 +74,42 @@ header {
   justify-content: center; }
 
 .heading {
-  margin-top: 7em; }
+  display: flex;
+  color: #fff;
+  margin-top: 9em;
+  padding: 24px 0px; }
+
+.get-started-btn {
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+  text-decoration: none;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .get-started-btn:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .get-started-btn:focus {
+    outline: none; }
+
+.Typewriter {
+  padding: 0px 5px !important; }
 
 .btn {
   all: unset;
@@ -90,7 +118,7 @@ header {
   font-family: 'Signika', sans-serif;
   font-weight: 400;
   border: 1px solid #e2dddd;
-  background: #0ea5e9;
+  background: #f42525;
   padding: 8px;
   min-width: 77px;
   text-align: center;
@@ -98,46 +126,39 @@ header {
   margin: 8px 10px; }
   .btn:hover {
     opacity: 1;
-    background-color: #38bdf8;
+    background-color: #a80d0f;
     cursor: pointer; }
 
 .card-list {
   margin-top: 30px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: baseline; }
 
 .character-img {
   width: 7rem; }
 
 .card {
-  margin: 15px 15px;
+  margin: 15px 20px;
   width: 15rem;
   height: auto;
-  background: linear-gradient(45deg, #cd2121, #f42828);
-  padding: 1rem;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center; }
+  justify-content: center; }
+  .card .title {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px; }
   .card:hover {
-    transform: translate(0px, -5px); }
+    transform: translate(0px, -5px);
+    color: #e42525; }
 
 .card-image {
-  margin-left: auto;
-  margin-right: auto;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%; }
-
-.title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 500;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  margin-top: 10px;
-  color: #0ea5e9; }
+  width: auto;
+  height: 20rem; }
 
 .card-content-div {
   text-align: center; }
@@ -147,7 +168,7 @@ header {
   font-size: 13px;
   letter-spacing: 1px;
   line-height: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #cbd5e1; }
 
@@ -197,7 +218,8 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  padding: 20px; }
 
 .swiper {
   width: 75% !important;
@@ -250,7 +272,7 @@ header {
 
 #root, body, html {
   overflow-x: hidden;
-  color: #764AF1;
+  color: #000;
   font-family: "Poppins", sans-serif;
   padding: 0px;
   margin: 0px; }
