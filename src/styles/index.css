@@ -18,6 +18,9 @@ header {
     flex-direction: row;
     float: right; }
 
+.right {
+  margin-right: 1rem; }
+
 .app-name {
   font-size: 2em;
   font-weight: 700;
@@ -25,32 +28,34 @@ header {
   color: #a0a0a0; }
 
 .navlink {
-  color: #a0a0a0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
   list-style: none;
-  padding: 0 10px;
+  padding: 10px 15px;
   margin-bottom: 5px;
   position: relative;
   font-family: 'Poppins' , sans-serif;
-  font-size: 18px;
   text-decoration: none;
-  letter-spacing: 0.5px; }
-  .navlink::after {
-    content: " ";
-    position: absolute;
-    background-color: #ff3c78;
-    height: 3px;
-    width: 0%;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s; }
+  letter-spacing: 0.5px;
+  font-weight: 700; }
   .navlink:hover::after {
     cursor: pointer;
     color: #fff;
     width: 90%; }
   .navlink:hover {
-    color: #fff; }
+    background-color: #a00;
+    color: #fff;
+    cursor: pointer; }
 
+@media only screen and (max-width: 450px) {
+  .navlink {
+    padding: 0px 10px; } }
+@media only screen and (max-width: 406px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%; } }
 .landing-page::before {
   content: "";
   background: url(".././assets/marvelbg.jpg") no-repeat center center/cover;
@@ -111,6 +116,17 @@ header {
 .Typewriter {
   padding: 0px 5px !important; }
 
+@media only screen and (max-width: 560px) {
+  .heading {
+    margin-top: 13em;
+    font-size: 19px; } }
+@media only screen and (max-width: 400px) {
+  .heading {
+    font-size: 16px; } }
+@media only screen and (max-width: 365px) {
+  .heading {
+    margin-top: 15em;
+    font-size: 14px; } }
 .btn {
   all: unset;
   color: #e8e4e4;
@@ -266,6 +282,31 @@ header {
   .swiperCard img {
     height: 40vh;
     width: 30vh; } }
+.nav__submenu {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  content: " ";
+  right: 1rem;
+  top: 4.3rem;
+  width: 11rem;
+  background: #fffefe;
+  border: 1px solid #555; }
+  .nav__submenu .nav__submenu-item {
+    padding-left: 10px;
+    list-style: none;
+    color: #babcc4; }
+
+.links {
+  text-decoration: none;
+  color: #555; }
+  .links:hover {
+    color: #e42525; }
+
+@media only screen and (max-width: 406px) {
+  .nav__submenu {
+    right: 2rem;
+    top: 7.3rem; } }
 * {
   margin: 0px;
   padding: 0px; }

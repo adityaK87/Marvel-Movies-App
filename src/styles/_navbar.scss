@@ -27,6 +27,9 @@ header{
 
     }
 }
+.right{
+    margin-right: 1rem;
+}
 
 .app-name{
     font-size: 2em;
@@ -36,33 +39,41 @@ header{
 }
 
 .navlink{
-    color: $navTextColor;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $font-color;
+    font-family:$font-family;
     list-style: none;
-    padding: 0 10px;
+    padding:10px 15px;
     margin-bottom: 5px;
     position: relative;
     font-family: 'Poppins' , sans-serif;
-    font-size: 18px;
     text-decoration: none;
     letter-spacing: 0.5px;
-    &::after{
-        content: " ";
-        position: absolute;
-        background-color: #ff3c78;
-        height: 3px;
-        width: 0%;
-        left: 0;
-        bottom: -10px;
-        transition: 0.3s;
-      
-    }
+    font-weight: 700;
+
     &:hover::after{
         cursor: pointer;
         color: #fff;
         width: 90%;
     }
     &:hover{
+        background-color: #a00;
         color: #fff;
+        cursor: pointer;
     }
+}
+
+@media  only screen and (max-width: 450px) {
+    .navlink{
+        padding: 0px 10px;
+    }
+    
+}
+@media  only screen and (max-width: 406px) {
+    .navbar{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    }
+
 }

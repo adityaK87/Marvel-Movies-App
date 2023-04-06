@@ -1,0 +1,32 @@
+.nav__submenu{
+    
+    display: block;
+    position: absolute;
+    z-index: 1;
+    content: " ";
+    right: 1rem;
+    top: 4.3rem;
+    width: 11rem;
+    background: rgb(255, 254, 254);
+    border: 1px solid #555;
+    .nav__submenu-item {
+        padding-left: 10px;
+        list-style: none;
+        color: $paragraph-font-color;
+
+    }
+}
+
+.links{
+    text-decoration: none;
+    color: #555;
+    &:hover{
+        color: $font-color-on-hover;
+    }
+}
+@media  only screen and (max-width: 406px) {
+    .nav__submenu{
+        right: 2rem;
+        top: 7.3rem;
+    }
+}
