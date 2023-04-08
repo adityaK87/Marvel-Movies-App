@@ -10,6 +10,7 @@ import SeriesList from "../components/SeriesList";
 import About from "../components/About";
 import useGlobalContext from "../context";
 import Swiper from "../components/Swiper";
+import Footer from "../components/Footer";
 
 const AppRouter = () => {
 	const [characters, setCharacters] = useState([]);
@@ -38,6 +39,7 @@ const AppRouter = () => {
 								<>
 									<LandingPage />
 									<Swiper />
+									<Footer />
 								</>
 							}
 						/>
