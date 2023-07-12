@@ -6,11 +6,8 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-• Fully responsive Marvel Movies Website using React, SCSS, and Context API, to explore Marvel
-  characters, series, and comics.
-• Utilized Axios to fetch data from the Marvel API.
-• Implemented React Router to enable seamless navigation between characters, series, and comics.
-• Implemented pagination to navigate through multiple pages within each category.
+This is a Fully responsive Marvel Movies Website created using React, SCSS, and Context API, to explore Marvel
+characters, series, and comics. It Utilized Axios to fetch data from the Marvel API. Implemented React Router to enable seamless navigation between characters, series, and comics. Implemented pagination to navigate through multiple pages within each category.
 
 ## 🚀 View Live Demo
 
