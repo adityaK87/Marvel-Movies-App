@@ -6,7 +6,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-This project is fetching Random Users from the API using Async/Await syntax and displaying users to user Component.
+• Fully responsive Marvel Movies Website using React, SCSS, and Context API, to explore Marvel
+  characters, series, and comics.
+• Utilized Axios to fetch data from the Marvel API.
+• Implemented React Router to enable seamless navigation between characters, series, and comics.
+• Implemented pagination to navigate through multiple pages within each category.
 
 ## 🚀 View Live Demo
 
